@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Clonage du repo"
-git clone https://github.com/TON_USER/LeagueGPT.git /root/LeagueGPT
+git clone https://github.com/Hakimttout/LeagueGPT.git /root/LeagueGPT
 
 cd /root/LeagueGPT
 
