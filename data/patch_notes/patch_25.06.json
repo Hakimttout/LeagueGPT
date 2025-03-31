@@ -1,0 +1,667 @@
+{
+  "title": "Notes de patch 25.06",
+  "version": "25.06",
+  "champions": {
+    "Caitlyn": {
+      "summary": "Les dégâts du tir à la tête du Z et les dégâts du R ont été réduits.",
+      "context": "Caitlyn est assez puissante en ce moment, en grande partie grâce aux dégâtsgarantisdans son kit. Pour égaliser les chances, nous voulons diminuer une partie de ses dégâts d'un seul clic dans ce patch, pour qu'il devienne plus important de réussir ses A et ses E si vous voulez réussir l'élimination.",
+      "abilities": [
+        {
+          "ability_name": "Z - Piège-yordle",
+          "changes": [
+            {
+              "label": "Dégâts du tir dans la tête contre les cibles piégées",
+              "text": "Dégâts du tir dans la tête contre les cibles piégées: 40/85/130/175/220 (+40% de vos dégâts d'attaque bonus) ⇒35 / 80 / 125 / 170 / 215 (+ 30% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Tir chirurgical",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 300/500/700 (+ 100% de vos dégâts d'attaque bonus) ⇒300/475/650(+ 100% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Corki": {
+      "summary": "L'armure de base a été réduite.",
+      "context": "Corki est un peu écrasant dans la voie du bas à haut niveau, et nous allons donc diminuer légèrement sa puissance de nuisance. Il décroche déjà très rapidement en fin de partie, alors nous allons concentrer ces nerfs sur son début de partie, d'où la réduction de son armure.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Armure de base",
+              "text": "Armure de base: 30 ⇒ 27"
+            }
+          ]
+        }
+      ]
+    },
+    "Darius": {
+      "summary": "Les dégâts de la compétence passive contre les monstres ont été réduits.",
+      "context": "Darius est devenu l'un des meilleurs junglers avec son build à vitesse de déplacement qui permet des ganks à peu près garantis. Puisque nous voulons affaiblir Darius dans la jungle sans affecter ses performances en voie du haut, nous avons 12 lignes mathématiques différentes qui ont prouvé leur omnivalence dans… Non, je plaisante. On s'intéresse au modificateur de la jungle, et c'est tout.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Plaie béante",
+          "changes": [
+            {
+              "label": "Modificateur de dégâts aux monstres",
+              "text": "Modificateur de dégâts aux monstres: 300% ⇒ 200%"
+            }
+          ]
+        }
+      ]
+    },
+    "Draven": {
+      "summary": "Les effets bonus de la compétence passive ont été supprimés.",
+      "context": "Draven a dominé la saison de Noxus jusqu'à maintenant, et c'est un peu pénible pour ceux qui ont la malchance de l'affronter. Nous pensons que ses dégâts sont bien paramétrés, mais son effet boule de neige à haut niveau est un peu trop ingérable. Nous allons donc supprimer une des mécaniques niches de sa compétence passive.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - League of Draven",
+          "changes": [
+            {
+              "label": "",
+              "text": "Draven ne gagne plus 2 effets d'Adoration supplémentaires tous les 6 éliminations"
+            }
+          ]
+        }
+      ]
+    },
+    "Ezreal": {
+      "summary": "La stat de croissance en armure a été réduite.",
+      "context": "Ezreal a été très présent et performant ces derniers temps. Il est assez difficile à attraper et ses builds lui octroient souvent une bonne quantité de PV ou autres caractéristiques défensives, ce qui le rend difficile à acculer et à éliminer. Pour ce patch, nous allons réduire le scaling de son armure, pour que les PV soient moins efficaces sur lui, et pour le rendre plus vulnérable sur la durée.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en armure",
+              "text": "Stat de croissance en armure: 4,7 ⇒ 4,2"
+            }
+          ]
+        }
+      ]
+    },
+    "Fiora": {
+      "summary": "Le coût en mana du A a été réduit.",
+      "context": "Fiora est au plus bas en termes de pourcentage de sélection, et obtient des résultats largement moins bons à bas niveau. Et pour ne rien arranger, elle est presque obligée d'acheter Hydre vorace, car elle ne peut pas compter sur ses propres compétences pour éliminer les vagues de sbires. Nous aimerions augmenter la fréquence à laquelle elle utilise sa compétence phare, et nous allons donc diminuer le coût en mana de son A.",
+      "abilities": [
+        {
+          "ability_name": "A - Fente",
+          "changes": [
+            {
+              "label": "Coût en mana",
+              "text": "Coût en mana: 20/25/30/35/40 ⇒ 20 à tous les rangs"
+            }
+          ]
+        }
+      ]
+    },
+    "Garen": {
+      "summary": "Les dégâts du E lors des coups critiques ont été réduits.",
+      "context": "Garen fait de l'ombre à beaucoup d'autres champions de la voie du haut, et inflige une quantité impressionnante de dégâts en milieu de partie avec ses builds à coups critiques, ce qui en fait une sorte d'assassin un peu tank. Nous voudrions réduire les dégâts que Garen inflige en affaiblissant ses coups critiques, ce qui n'impactera pas les builds colosse plus équilibrés.",
+      "abilities": [
+        {
+          "ability_name": "E - Jugement",
+          "changes": [
+            {
+              "label": "Dégâts des coups critiques",
+              "text": "Dégâts des coups critiques: 175% ⇒ 150%"
+            }
+          ]
+        }
+      ]
+    },
+    "Gwen": {
+      "summary": "Toutes les compétences ont été ajustées.",
+      "context": "Gwen devait à l'origine être une combattante à puissance avec unlégerscaling, ce que son kit et ses points forts reflétaient. Mais avec le temps, elle a tendance à avoir un scaling de fin de partie. Sa courbe de puissance se rapproche d'un hyperscaler comme Kayle, au lieu d'un scaling léger comme Fiora. Nous pensons que la meilleure version de Gwen est celle où son cumul du A et sa ruée du E sont des outils puissants et amusants dans la phase de laning, voire dans la jungle. Mais aujourd'hui, elle joue plutôt scaling et remporte des combats d'équipe simplement avec Piqûre. Nous voulons que les joueurs puissent dominer la partie avec Gwen, mais en utilisant tout son kit, plutôt que de farmer des PO et d'enchaîner des aiguilles ultimes.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en PV",
+              "text": "Stat de croissance en PV: 115 ⇒ 110"
+            },
+            {
+              "label": "PV de base",
+              "text": "PV de base: 620 ⇒ 650"
+            }
+          ]
+        },
+        {
+          "ability_name": "P - Mille coupures",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 1% (+0,6% tous les 100 pts de puissance) des PV de la cible ⇒ 1%(+0,55% tous les 100 pts de puissance)des PV de la cible"
+            },
+            {
+              "label": "Modificateur de dégâts aux monstres",
+              "text": "Modificateur de dégâts aux monstres: 10 (+15% de votre puissance) ⇒5(+15% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Tchac, tchac !",
+          "changes": [
+            {
+              "label": "Dégâts du dernier coup de ciseaux",
+              "text": "Dégâts du dernier coup de ciseaux: 60/85/110/135/160 (+35% de votre puissance) ⇒70/95/120/145/170(+35% de votre puissance)"
+            },
+            {
+              "label": "Dégâts max",
+              "text": "Dégâts max: 110/160/210/260/310 (+60% de votre puissance) ⇒ 120/170/220/270/320 (+60% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Brume sacrée",
+          "changes": [
+            {
+              "label": "Résistances supplémentaires",
+              "text": "Résistances supplémentaires: 22/24/26/28/30 (+7% de votre puissance) ⇒ 25 (+ 5% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Élan incisif",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 13 / 12.5 / 12 / 11.5 / 11 secondes ⇒ 12 / 11 / 10 / 9 / 8 secondes"
+            },
+            {
+              "label": "Réduction du délai de récupération",
+              "text": "Réduction du délai de récupération: 25/35/45/55/65% ⇒ 50% à tous les rangs"
+            },
+            {
+              "label": "Dégâts à l'impact",
+              "text": "Dégâts à l'impact: 15 (+20% de votre puissance) ⇒12/14/16/18/20 (+ 25% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Piqûre",
+          "changes": [
+            {
+              "label": "Dégâts par aiguille",
+              "text": "Dégâts par aiguille: 35/65/95 (+10% de votre puissance) ⇒30/60/90 (+8% de votre puissance)"
+            },
+            {
+              "label": "Ralentissement initial",
+              "text": "Ralentissement initial: 40/50/60% ⇒ 60% à tous les rangs"
+            },
+            {
+              "label": "Ralentissement réduit",
+              "text": "Ralentissement réduit: 15/20/25% ⇒ 25% à tous les rangs"
+            }
+          ]
+        }
+      ]
+    },
+    "Jarvan IV": {
+      "summary": "Les dégâts du A ont été augmentés.",
+      "context": "Jarvan est en perte de vitesse dans la jungle ces derniers temps, ce qui signifie qu'il mérite quelques bonus de dégâts qui lui permettront de mieux carry et d'avoir plus d'impact dans les escarmouches. Nous allons renforcer les dégâts de base de son A et son scaling, car cela reste son outil le plus fiable pour infliger des dégâts. La compétence a aussi tendance à être plus puissante à bas niveau, ce qui devrait éviter que ce bonus soit viable uniquement en Pro.",
+      "abilities": [
+        {
+          "ability_name": "A - Frappe du dragon",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 80/120/160/200/240 (+ 140% de vos dégâts d'attaque bonus) ⇒90/130/170/210/250 (+ 145% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Jhin": {
+      "summary": "Le scaling de sa compétence passive a été augmenté.",
+      "context": "Jhin est plus faible que nous le voulions, et au fil des ans, il est devenu plus adapté au début de partie. C'est donc l'occasion de lui offrir quelques bonus de milieu et de fin de partie. Dans ce patch, nous allons chercher à ramener quelques builds puissants à deux objets, et à améliorer la progression de Jhin de manière générale.Compétence passive - Murmure",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Murmure",
+          "changes": []
+        }
+      ]
+    },
+    "Jinx": {
+      "summary": "Les dégâts du R ont été réduits.",
+      "context": "Jinx est en roue libre à tous les niveaux, et nous devons lui rogner un tout petit peu les ailes. L'ultime de Jinx est un outil puissant à toutes les étapes du jeu, quel que soit l'état de la partie, et ce patch va chercher à diminuer la menace globale qu'elle représente, pour conserver ses dégâts instantanés réactifs contre les ennemis à PV faibles.",
+      "abilities": [
+        {
+          "ability_name": "R - Super roquette de la mort !",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 325/475/625 (+165% de vos dégâts d'attaque bonus) (+25/30/35% des PV manquants de la cible) ⇒300/450/600 (+155% de vos dégâts d'attaque bonus)(+25/30/35% des PV manquants de la cible)"
+            }
+          ]
+        }
+      ]
+    },
+    "Kai'Sa": {
+      "summary": "L'armure de base et la régénération de base des PV ont été augmentées. Le délai de récupération du R a été réduit.",
+      "context": "Kai'Sa est censée être faible en début de partie, mais son état actuel est si faible qu'il y a peu d'intérêt à la choisir plutôt que d'autres ADC. Nous allons lui donner un peu plus d'efficacité dans les voies en augmentant son armure et sa régénération des PV, tout en lui donnant un accès plus fréquent à son outil le plus intéressant, son ultime.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Armure de base",
+              "text": "Armure de base: 25 ⇒ 27"
+            },
+            {
+              "label": "Régénération de base des PV",
+              "text": "Régénération de base des PV: 3,5 ⇒ 4"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Instinct meurtrier",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 130/100/70 secondes ⇒ 120/90/60 secondes"
+            }
+          ]
+        }
+      ]
+    },
+    "Karma": {
+      "summary": "Les dégâts de base du A ont été réduits.",
+      "context": "Karma s'est rapidement imposée comme la support mage-enchanteresse la plus puissante du jeu. Nous sommes ravis qu'elle soit revenue des profondeurs de l'inutilité, mais elle doit être un peu moins efficace pour laisser aux autres une chance. Ces nerfs affecteront son build A-max le plus fréquent en affaiblissant sa phase de laning, tout en nerfant son build E-max OP en imposant un nerf plus puissant aux niveaux les plus bas.",
+      "abilities": [
+        {
+          "ability_name": "A - Flamme intérieure",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 70/120/170/220/270 (+70% de votre puissance) ⇒60/110/160/210/260(+70% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Kha'Zix": {
+      "summary": "Les dégâts de la compétence passive et du E ont été augmentés.",
+      "context": "Kha'Zix n'est pas en très bon état, et nous allons le renforcer en PvP, pour lui donner de nouvelles raisons de jouer avec sa compétence passive et son Bond, en rendant les deux un peu plus puissants.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Menace invisible",
+          "changes": [
+            {
+              "label": "Dégâts bonus",
+              "text": "Dégâts bonus: 14 - 116 (selon le niveau) (+40% de vos dégâts d'attaque bonus) ⇒17 - 136 (selon le niveau) (+50% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Bond",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 65/100/135/170/205 (+ 20% de vos dégâts d'attaque bonus) ⇒ 65/100/135/170/205(+ 40% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Lillia": {
+      "summary": "Le délai de récupération du E a été réduit et le scaling a été augmenté.",
+      "context": "Lilia est un peu faible en ce moment, alors quelques buffs lui feront du bien. Le délai de récupération de Graine tournoyante est un peu trop punitif par rapport à la fréquence à laquelle elle devrait pouvoir débouler dans une voie et chercher un strike. Nous allons donc diminuer le délai de récupération et augmenter les dégâts.",
+      "abilities": [
+        {
+          "ability_name": "E - Graine tournoyante",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 14 secondes ⇒ 12 secondes"
+            },
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 60/85/110/135/160 (+50% de votre puissance) ⇒ 60/85/110/135/160(+60% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Lucian": {
+      "summary": "Le délai de récupération du E a été réduit.",
+      "context": "Lucian est un peu trop faible dans le paysage actuel de League, et nous aimerions lui donner un peu plus de puissance. Nous allons lui donner un peu de mobilité qu'il pourra utiliser de manière agressive au début de la phase de laning et dans les combats d'équipes de milieu de partie, avec l'intention d'en faire un ADC agressif et puissant, axé sur la prise de décision rapide.",
+      "abilities": [
+        {
+          "ability_name": "E - Poursuite inlassable",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 19/17,75/16,5/15,25/14 secondes ⇒ 16/15,5/15/14,5/14 secondes"
+            }
+          ]
+        }
+      ]
+    },
+    "Maître Yi": {
+      "summary": "La stat de croissance en armure a été réduite. Les dégâts des coups critiques du A ont été augmentés.",
+      "context": "Maître Yi a plusieurs options défensives à activer. Lorsqu'il est attaquable, il devrait donc être plus vulnérable, du point de vue des statistiques. Nous allons cibler la croissance de son armure pour nous assurer que ces périodes de vulnérabilité seront des points faibles plus clairs dont ses adversaires pourront profiter. En outre, nous augmentons le ratio de dégâts critiques bonus d'Assaut éclair, pour que Maître Yi à coups critiques soit plus viable. Nous savons que de nombreux joueurs l'apprécient.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en armure",
+              "text": "Stat de croissance en armure: 4,7 ⇒ 4,2"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Assaut éclair",
+          "changes": [
+            {
+              "label": "Dégâts de coup critique bonus",
+              "text": "Dégâts de coup critique bonus: 75% ⇒ 100%"
+            }
+          ]
+        }
+      ]
+    },
+    "Naafiri": {
+      "summary": "Mise à jour de moyenne ampleur.",
+      "context": "Naafiri était conçue comme un assassin de voie du milieu facile à jouer, mais elle a eu du mal à trouver un public. Cette idée n'était peut-être pas la version idéale de Naafiri, alors nous allons repasser en profondeur sur son personnage et augmenter le potentiel de son kit, tout en la rendant jouable dans la jungle.Pour cela, nous allons inverser ses compétences Z (Hallali) et son R (Appel de la meute). Elles ont été ajustées pour tenir compte de leur nouvelle place dans le kit de Naafiri. En outre, lancer Appel de la meute rend à présent Naafiri impossible à cibler, ce qui en fait une compétence de dégâts ou un outil stratégique, au choix.Pour finir, vu sa thématique de meute, c'était l'occasion de renforcer la présence de ses chiens. Elle en recevra davantage de manière passive au fil de la partie, et Appel de la meute lui donne une nouvelle façon, en plus de l'ultime, d'actualiser sa meute à volonté.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en PV",
+              "text": "Stat de croissance en PV: 120 ⇒ 105"
+            },
+            {
+              "label": "Stat de croissance en armure",
+              "text": "Stat de croissance en armure: 4,7 ⇒ 4,2"
+            },
+            {
+              "label": "Dégâts d'attaque de base",
+              "text": "Dégâts d'attaque de base: 55 ⇒ 57"
+            },
+            {
+              "label": "Stat de croissance en dégâts d'attaque",
+              "text": "Stat de croissance en dégâts d'attaque: 2,1 ⇒ 2"
+            }
+          ]
+        },
+        {
+          "ability_name": "Compétence passive - La meute s'agrandit",
+          "changes": [
+            {
+              "label": "Membres de meute max",
+              "text": "Membres de meute max: 2/3 (niveaux 1/9) ⇒ 2/3/4/5 (niveaux 1/9/12/15)"
+            },
+            {
+              "label": "Dégâts des membres de meute",
+              "text": "Dégâts des membres de meute: 12 - 32 (selon le niveau) (+5% de vos dégâts d'attaque bonus) ⇒10 - 20 (selon le niveau) (+4 de vos dégâts d'attaque bonus)"
+            },
+            {
+              "label": "Stat de croissance en PV des membres de meute",
+              "text": "Stat de croissance en PV des membres de meute: 16 ⇒ 13"
+            },
+            {
+              "label": "Stat de croissance en armure/résistance magique des membres de meute",
+              "text": "Stat de croissance en armure/résistance magique des membres de meute: 2 ⇒ 1,8"
+            },
+            {
+              "label": "Réduction des dégâts de zone subis des membres de la meute",
+              "text": "Réduction des dégâts de zone subis des membres de la meute: 76 - 50% (niveaux 1-14) ⇒ 76 - 55% (niveaux 1-15)"
+            },
+            {
+              "label": "Dégâts des membres de meute aux tourelles",
+              "text": "Dégâts des membres de meute aux tourelles: 25% ⇒ 50%"
+            },
+            {
+              "label": "Qui est le véritable monstre ?",
+              "text": "Qui est le véritable monstre ?: les membres de meute infligent désormais 165% de dégâts contre les monstres"
+            },
+            {
+              "label": "Durée de provocation des membres de meute",
+              "text": "Durée de provocation des membres de meute: 3 secondes ⇒ 2 secondes"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Dagues des Darkin",
+          "changes": [
+            {
+              "label": "Dégâts aux sbires",
+              "text": "Dégâts aux sbires: 60% ⇒ 80%"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Appel de la meute",
+          "changes": [
+            {
+              "label": "Dans la meute",
+              "text": "Dans la meute: Naafiri et ses membres de meute deviennent impossibles à cibler pendant 1 sec au lancement"
+            },
+            {
+              "label": "Dégâts d'attaque bonus",
+              "text": "Dégâts d'attaque bonus: 5/15/25 (+8-24% de vos dégâts d'attaque) ⇒ +20% de vos dégâts d'attaque(Remarque : l'effet est désormais attribué au lancement de la compétence.)"
+            },
+            {
+              "label": "Membres de meute supplémentaires",
+              "text": "Membres de meute supplémentaires: 2/3/4 ⇒ 2"
+            },
+            {
+              "label": "Durée du buff",
+              "text": "Durée du buff: 15 secondes ⇒ 5 secondes"
+            },
+            {
+              "label": "Vitesse de déplacement bonus",
+              "text": "Vitesse de déplacement bonus: 70-100%, diminuant en 4 secondes, et réduite en cas de dégâts subis ⇒ 20-30% pendant 5 secondes(Remarque : l'effet est désormais attribué au lancement de la compétence.)"
+            },
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 120/110/100 secondes ⇒ 20/19,5/19/18,5/18 secondes"
+            },
+            {
+              "label": "Coût en mana",
+              "text": "Coût en mana: 100 ⇒ 60"
+            },
+            {
+              "label": "SUPPRIMÉ",
+              "text": "SUPPRIMÉ: Appel de la meute ne confère plus de bouclier ni de vision à Naafiri et ne réinitialise plus les buffs de la compétence en cas d'élimination. Les membres de meute ne gagnent plus de PV bonus ni de délai de récupération."
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Hallali",
+          "changes": [
+            {
+              "label": "Apprendre un nouveau tour",
+              "text": "Apprendre un nouveau tour: si Naafiri réalise une élimination dans les 7 sec, elle révèle les ennemis proches et peut relancer sa compétence une fois. La deuxième activation de la compétence octroie un bouclier équivalent à 100/150/200 (+1,5% de vos dégâts d'attaque bonus) pendant 3 sec."
+            },
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 22/20/18/16/14 secondes ⇒ 110/95/80 secondes"
+            },
+            {
+              "label": "Coût en mana",
+              "text": "Coût en mana: 70/60/50/40/30 ⇒ 100"
+            },
+            {
+              "label": "Portée",
+              "text": "Portée: 700/780/860/940 unités ⇒ 900 unités"
+            },
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 30/70/110/150/190 (+80% de vos dégâts d'attaque bonus) (+10% par membre de meute) ⇒ 150/250/350 (+120% de vos dégâts d'attaque bonus) (+10% par membre de meute)"
+            },
+            {
+              "label": "Fuyez",
+              "text": "Fuyez: cette compétence ne peut plus être bloquée."
+            },
+            {
+              "label": "Gros chiens UNIQUEMENT",
+              "text": "Gros chiens UNIQUEMENT: cette compétence ne peut plus être lancée sur des sbires."
+            }
+          ]
+        }
+      ]
+    },
+    "Poppy": {
+      "summary": "Les dégâts du A contre les monstres ont été augmentés.",
+      "context": "Poppy a reçu de nombreux changements récemment, et si sa force en voie du haut ou en support est acceptable, sa capacité de jungler a souffert. Pour ce patch, nous comptons lui donner une puissance spécifiquement axée sur la jungle, sans trop affecter ses autres rôles.",
+      "abilities": [
+        {
+          "ability_name": "A - Commotion",
+          "changes": [
+            {
+              "label": "Dégâts max en fonction des PV contre les monstres",
+              "text": "Dégâts max en fonction des PV contre les monstres: 50/80/110/140/170 ⇒75/105/135/165/195"
+            },
+            {
+              "label": "Dégâts max contre les monstres",
+              "text": "Dégâts max contre les monstres: 80/135/190/245/300 (+100% de vos dégâts d'attaque bonus) ⇒105/160/215/270/325(+100% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Singed": {
+      "summary": "La vitesse d'attaque de base a été augmentée. Le A vole désormais les éliminations aux sbires alliés. Le scaling du E a été réduit.",
+      "context": "Singed a toujours eu du mal à farmer, non seulement face à un autre champion dans sa voie, mais aussi face à ses propres sbires. Avec l'augmentation récente des dégâts des sbires, l'écart est devenu encore plus visible, et nous avons déterminé que la variation élevée de sa capacité à achever les sbires dans les voies dépend démesurément de facteurs hors du contrôle du joueur de Singed. Par conséquent, nous nerfons légèrement le scaling de Singed et nous améliorons grandement sa capacité à achever des sbires. Cela devrait retirer un peu de la puissance que recevait Singed gratuitement et donner plus de PO aux joueurs en compensation afin d'acheter les stats et les effets qu'ils préfèrent.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Vitesse d'attaque de base",
+              "text": "Vitesse d'attaque de base: 0,625 ⇒ 0,7(Remarque : cela représente une augmentation de 12% de vitesse d'attaque au niveau 1.)"
+            },
+            {
+              "label": "Stat de croissance en PV",
+              "text": "Stat de croissance en PV: 99 ⇒ 96"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Piste empoisonnée",
+          "changes": [
+            {
+              "label": "Respect de la priorité",
+              "text": "Respect de la priorité: si un sbire meurt d'un autre sbire alors qu'il est affecté par Piste empoisonnée, les bénéfices reviennent à Singed."
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Projection",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 50/60/70/80/90 (+6/6,5/7/7,5/8% des PV max de la cible) (+60% de votre puissance) ⇒ 50/60/70/80/90 (+6/6,5/7/7,5/8% des PV max de la cible)(+55% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Smolder": {
+      "summary": "Les dégâts du Z ont été augmentés. Les dégâts du E ont été augmentés. Le délai de récupération du R a été réduit.",
+      "context": "Smolder est loin d'être en feu en ce moment, ce qui est plutôt triste pour... un dragon... de feu, alors nous lui apportons des buffs là où il en a besoin. Son Z n'est pas très efficace pour achever les sbires en début de partie, les boules de feu de son E ne donnent pas envie d'être utilisées offensivement. Son R ne flambe désormais plus les sbires, donc il n'a plus besoin d'avoir un long délai de récupération tout au long de la partie. Voilà qui devrait redonner la flamme à notre petit dragon préféré et l'aider à rendre maman fière.",
+      "abilities": [
+        {
+          "ability_name": "Z - ATCHOUM !",
+          "changes": [
+            {
+              "label": "Dégâts de l'orbe",
+              "text": "Dégâts de l'orbe: 30/50/70/90/110 (+60% de vos dégâts d'attaque bonus) ⇒60/70/80/90/100(+60% de vos dégâts d'attaque bonus)"
+            },
+            {
+              "label": "Dégâts de l'explosion",
+              "text": "Dégâts de l'explosion: 30/50/70/90/110 (+ 60% de vos dégâts d'attaque bonus) (+80% de votre puissance) ⇒10/35/60/85/110 (+65% de vos dégâts d'attaque bonus)(+80% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Flap, flap, flap !",
+          "changes": [
+            {
+              "label": "Dégâts par boule de feu",
+              "text": "Dégâts par boule de feu: 5/10/15/20/25 (+25% de vos dégâts d'attaque) ⇒10/15/20/25/30 (+30% de vos dégâts d'attaque)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - MAMAAAN !",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 120 secondes ⇒ 120/110/100 secondes"
+            }
+          ]
+        }
+      ]
+    },
+    "Twisted Fate": {
+      "summary": "L'armure de base a été augmentée.",
+      "context": "Nous donnons un petit coup de boost à Twisted Fate, car il est un peu à la traîne depuis quelque temps. Étant donné qu'il se repose beaucoup sur ses attaques, malgré son rôle de mage, ilattireun peu trop l'attention des sbires. Afin de le laisser performer son art en paix, nous lui ajoutons un peu d'armure de base pour qu'il puisse faire face plus efficacement aux sbires.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Armure de base",
+              "text": "Armure de base: 21 ⇒ 24"
+            }
+          ]
+        }
+      ]
+    },
+    "Xin Zhao": {
+      "summary": "Les dégâts du A ont été augmentés.",
+      "context": "Xin Zhao est un peu en deçà des autres junglers, ce qui le rend moins intéressant que les autres combattants AD, donc nous l'aidons à revenir dans la course.",
+      "abilities": [
+        {
+          "ability_name": "A - Frappe des trois serres",
+          "changes": [
+            {
+              "label": "Dégâts bonus",
+              "text": "Dégâts bonus: 16/29/42/55/68 (+40% de vos dégâts d'attaque bonus) ⇒20/35/50/65/80(+40% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Yorick": {
+      "summary": "Les dégâts du E contre les monstres ont été réduits.",
+      "context": "Actuellement, Yorick s'en sort beaucoup trop bien dans la jungle, en creusant la tombe des monstres et des ennemis à toute vitesse. Nous nerfons un de ses outils dans la jungle pour mettre Yorick au même niveau que les autres junglers.",
+      "abilities": [
+        {
+          "ability_name": "E - Brume endeuillée",
+          "changes": [
+            {
+              "label": "Dégâts max en fonction des PV contre les monstres",
+              "text": "Dégâts max en fonction des PV contre les monstres: 300 ⇒70/105/140/175/210"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "items": {
+    "Rancune de Serylda": {
+      "summary": "",
+      "context": "Nous modifions l'objet dans ce patch pour le rendre plus attrayant pour les assassins en augmentant la pénétration d'armure et en réduisant l'accélération de compétence. Il ne s'agit pas d'un très gros buff, mais l'objet devrait être plus agréable à utiliser pour la plupart des assassins.",
+      "abilities": []
+    },
+    "Armure de Warmog": {
+      "summary": "",
+      "context": "L'efficacité de la Warmog a beaucoup évolué cette saison, mais, malheureusement, pas dans le bon sens. Dans ce patch, nous améliorons le point culminant de l'effet pour faire en sorte que cet objet reste une option d'achat de fin de partie pour la plupart des champions et nous réduisons le coût en PO maintenant que les supports ont moins intérêt à s'en emparer.",
+      "abilities": []
+    }
+  },
+  "others": []
+}

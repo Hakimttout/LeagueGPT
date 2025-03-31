@@ -1,0 +1,279 @@
+{
+  "title": "Notes de patch 25.05",
+  "version": "25.05",
+  "champions": {
+    "Ambessa": {
+      "summary": "Les dégâts du E ont été réduits.",
+      "context": "Ambessa excelle un peu trop dans l'élimination rapide des cibles fragiles, nous réduisons donc un peu ses dégâts de base pour nous assurer qu'elle lance le bon nombre de compétences pour éliminer ses cibles.",
+      "abilities": [
+        {
+          "ability_name": "E - Lacération",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 40/65/90/115/140 (+60% de vos dégâts d'attaque bonus) ⇒ 40/60/80/100/120 (+60 de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Aphelios": {
+      "summary": "Le ratio de vitesse d'attaque a été augmenté.",
+      "context": "Aphelios n'est pas particulièrement faible, mais ses builds actuels se concentrent principalement sur ses compétences et non sur ses attaques. Nous augmentons donc son ratio de vitesse d'attaque pour que le fait d'investir dans la vitesse d'attaque soit un peu plus rentable.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Ratio de vitesse d'attaque",
+              "text": "Ratio de vitesse d'attaque: 0,640 ⇒ 0,658"
+            }
+          ]
+        }
+      ]
+    },
+    "Ashe": {
+      "summary": "Les dégâts du R ont été réduits.",
+      "context": "Nous avons un peu trop renforcé Ashe lors du dernier patch, et nous voulons donc corriger cette erreur. Ce nerf sera très léger, car Ashe est déjà proche de son niveau de puissance prévu.",
+      "abilities": [
+        {
+          "ability_name": "R - Flèche de cristal enchantée",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 250/450/650 ⇒ 200/400/600"
+            }
+          ]
+        }
+      ]
+    },
+    "Aurora": {
+      "summary": "Les dégâts du E ont été réduits.",
+      "context": "Aurora attrape et élimine trop rapidement ses cibles en milieu de partie, c'est pourquoi nous réduisons une partie de ses dégâts instantanés et facilitons un peu la tâche de ceux qui veulent lui échapper.",
+      "abilities": [
+        {
+          "ability_name": "E - Sortilège",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 70/110/150/190/230 (+80% de votre puissance) ⇒ 70/110/150/190/230 (+70% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Entre les mondes",
+          "changes": [
+            {
+              "label": "Ralentissement infligé par l'onde de choc",
+              "text": "Ralentissement infligé par l'onde de choc: 75% ⇒ 50%"
+            }
+          ]
+        }
+      ]
+    },
+    "Cho'Gath": {
+      "summary": "Les dégâts du A ont été réduits. Les dégâts du Z ont été réduits. Les dégâts du E ont été réduits aux premiers rangs, mais augmentés aux derniers rangs.",
+      "context": "Cho'Gath mid a connu un succès un peu trop retentissant, c'est pourquoi nous essayons de diminuer son niveau de puissance pour en faire un champion plus équilibré. Nous ciblons plus particulièrement les dégâts instantanés de ses compétences de base, car c'est ce qui rend son style de jeu si puissant. En ajustant les dégâts de son E pour qu'il soit davantage basé sur les rangs, nous réduisons un peu la puissance de Cho'Gath et compensons la perte de dégâts de son A et de son Z lorsqu'il est joué tank sur la voie du haut.",
+      "abilities": [
+        {
+          "ability_name": "A - Rupture",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 80/145/210/275/340 (+100% de votre puissance) ⇒ 80/140/200/260/320 (+100% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Cri sauvage",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 80/135/190/245/300 (+70% de votre puissance) ⇒ 80/130/180/230/280 (+70% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Piques vorpales",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 20/40/60/80/100 (+3% (+0,5% par effet cumulé) des PV max de la cible) ⇒ 20/40/60/80/100 (+2,5/2,75/3/3,25/3,5% (+0,5% par effet cumulé) des PV max de la cible)"
+            }
+          ]
+        }
+      ]
+    },
+    "Elise": {
+      "summary": "Les dégâts du A sous les deux formes ont été réduits.",
+      "context": "Les changements apportés par le dernier patch ont permis de rapprocher la puissance d'Elise dans ses rôles de jungler et de support, mais nos buffs étaient un peu trop forts. Nous sommes satisfaits de sa puissance offensive qui utilise davantage les attaques d'araignée, c'est pourquoi nous allons réduire un peu ses dégâts instantanés.",
+      "abilities": [
+        {
+          "ability_name": "A (forme humaine) - Neurotoxine",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 40/75/110/145/180 (+4% des PV de la cible) (+3% tous les 100 pts de puissance)) ⇒ 40/70/100/130/160 (+4% des PV de la cible) (+3% tous les 100 pts de puissance))"
+            }
+          ]
+        },
+        {
+          "ability_name": "A (forme araignée) - Morsure venimeuse",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 60/90/120/150/180 (+8% des PV manquants de la cible (+3% tous les 100 pts de puissance)) ⇒ 50/80/110/140/180 (+8% des PV manquants de la cible (+3% tous les 100 pts de puissance))"
+            }
+          ]
+        }
+      ]
+    },
+    "K'Santé": {
+      "summary": "Les dégâts de la compétence passive ont été réduits. Les dégâts du Z ont été réduits.",
+      "context": "Le début de phase de laning de K'Santé est trop puissant et ses dégâts en fin de partie sont également trop élevés, en particulier l'utilisation de Pour Nazumah ! lorsqu'elle est chargée au max. Nous nerfons ces deux aspects en apportant quelques ajustements ciblés.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Instinct intrépide",
+          "changes": [
+            {
+              "label": "Dégâts de la marque",
+              "text": "Dégâts de la marque: 20 (+1-2% (selon le niveau) des PV max de la cible) ⇒ 12 (+1-2% (selon le niveau) des PV max de la cible)"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Pour Nazumah !",
+          "changes": [
+            {
+              "label": "Dégâts bruts bonus de Grand jeu",
+              "text": "Dégâts bruts bonus de Grand jeu: 10-100% (selon la durée de la canalisation) ⇒ 10-80% (selon la durée de la canalisation)"
+            }
+          ]
+        }
+      ]
+    },
+    "Dr. Mundo": {
+      "summary": "Les PV de base ont été augmentés.",
+      "context": "Dr. Mundo est un peu faible depuis quelque temps, surtout depuis les récentes réductions de puissance de la plupart de ses objets préférés. Nous voulons donc augmenter ses PV de base pour compenser le manque de PV provenant des objets. Comme une grande partie du kit de Dr. Mundo dépend de ses PV max, nous pensons que cette augmentation des PV de base sera plus utile que pour la plupart des champions.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "PV",
+              "text": "PV: 613 ⇒ 640"
+            }
+          ]
+        }
+      ]
+    },
+    "Poppy": {
+      "summary": "La stat de croissance en dégâts d'attaque a été augmentée. La formule du bouclier de la compétence passive a été modifiée. Les dégâts du E ont été réduits.",
+      "context": "Poppy est un peu moins performante sur la voie du haut depuis les récents nerfs des objets de tank. Elle reste également assez faible dans son rôle de jungler, mais elle est globalement assez forte dans son rôle de support. Nous voulons renforcer sa puissance sur la voie du haut et dans la jungle tout en réduisant sa puissance de support. Pour ce faire, nous allons réduire une partie de ses dégâts instantanés et la rendre plus dépendante de son niveau.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en PV",
+              "text": "Stat de croissance en PV: 104 ⇒ 110"
+            }
+          ]
+        },
+        {
+          "ability_name": "Compétence passive - Ambassadrice de fer",
+          "changes": [
+            {
+              "label": "Bouclier",
+              "text": "Bouclier: 13/15,5/18% des PV max au niveau 1/7/13 ⇒ 11-20% des PV max (selon le niveau)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Charge héroïque",
+          "changes": [
+            {
+              "label": "Dégâts max",
+              "text": "Dégâts max: 100/140/180/220/260 (+100% de vos dégâts d'attaque bonus) ⇒ 80/120/160/200/240 (+120% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Séraphine": {
+      "summary": "Les dégâts max du A ont été augmentés.",
+      "context": "Séraphine est un peu moins performante que les autres supports mages et surtout moins performante que les autres mages de la voie du bas. C'est pourquoi nous avons légèrement amélioré l'ordre d'amélioration classique de ses compétences, qui est la maximisation du A. Comme il est généralement déconseillé de lancer A deux fois d'affilé en combat pour bénéficier des dégâts bonus, nous rendons cela plus intéressant grâce aux dégâts situationnels de Séraphine.",
+      "abilities": [
+        {
+          "ability_name": "A - Note aiguë",
+          "changes": [
+            {
+              "label": "Dégâts bonus max aux champions",
+              "text": "Dégâts bonus max aux champions: 60% ⇒ 75%"
+            }
+          ]
+        }
+      ]
+    },
+    "Skarner": {
+      "summary": "La durée du ralentissement et les dégâts finaux bonus du A ont été réduits. Le délai de récupération du E a été augmenté.",
+      "context": "Skarner a encore besoin d'équilibrage. Cette fois, nous voulons réduire l'efficacité du A dans les mains des joueurs expérimentés. Nous augmentons également le délai de récupération de sa mobilité pour l'obliger à s'engager plus longtemps dans les combats avant de s'échapper.",
+      "abilities": [
+        {
+          "ability_name": "A - Terre brisée",
+          "changes": [
+            {
+              "label": "Durée du ralentissement",
+              "text": "Durée du ralentissement: 1,25 sec ⇒ 1 sec"
+            },
+            {
+              "label": "Dégâts bonus de l'attaque finale",
+              "text": "Dégâts bonus de l'attaque finale: +10% des PV max de la cible ⇒ +8% des PV max de la cible"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Impact d'Ixtal",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 20/19/18/17/16 sec ⇒ 22/21/20/19/18 sec"
+            }
+          ]
+        }
+      ]
+    },
+    "Yorick": {
+      "summary": "Les dégâts maximum contre les monstres du R ont été réduits.",
+      "context": "Yorick est extrêmement puissant en tant que jungler et moyennement puissant lorsqu'il joue sur la voie. Nous souhaitons donc réduire sa capacité à détruire rapidement les camps et les monstres épiques avec son ultime actif, ce qui aura un certain impact lorsqu'il joue sur la voie, mais qui réduira surtout sa capacité à se débarrasser rapidement des monstres lorsqu'il joue en tant que jungler.",
+      "abilities": [
+        {
+          "ability_name": "R - Élégie des Îles",
+          "changes": [
+            {
+              "label": "Limite de dégâts contre les monstres avec la marque de la Vierge",
+              "text": "Limite de dégâts contre les monstres avec la marque de la Vierge: 100 ⇒ 50"
+            }
+          ]
+        }
+      ]
+    },
+    "Zed": {
+      "summary": "Les dégâts du E ont été augmentés.",
+      "context": "Zed a un peu perdu de sa superbe et a bien besoin d'un petit coup de pouce. Nous allons augmenter les dégâts qu'il peut infliger, ce qui l'obligera à mettre son corps en danger, ou à utiliser le délai de récupération de son ombre pour pouvoir l'utiliser.",
+      "abilities": [
+        {
+          "ability_name": "E - Taillade des ombres",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 65/90/115/140/165 (+65% de vos dégâts d'attaque bonus) ⇒ 70/95/120/145/170 (+80% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "items": {},
+  "others": []
+}

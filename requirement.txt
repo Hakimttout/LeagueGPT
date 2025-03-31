@@ -1,0 +1,8 @@
+streamlit
+chromadb
+sentence-transformers
+transformers
+torch
+requests
+beautifulsoup4
+python-dotenv
