@@ -4,67 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="deb16240-9c0b-44c0-b973-bae1fc6119e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/core/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/core/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/core/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/core/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/rag/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_backend/requirements.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/.env.development" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/.env.production" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/nginx.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/public/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/public/vite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/App.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/App.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/assets/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/main.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/src/vite-env.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/tsconfig.node.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LeagueGPT_frontend/vite.config.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/patch_notes/chunks/chunks_25.07.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/patch_notes/patch_25.07.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/backend/retrieve.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/backend/retrieve.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/embedding/build_chroma.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/embedding/build_chroma.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ingestion/generate_chunks.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/ingestion/generate_chunks.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chroma/leaguegpt/83cbfb47-1c6f-4f6e-8eca-d5563b99b35b/data_level0.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chroma/leaguegpt/83cbfb47-1c6f-4f6e-8eca-d5563b99b35b/header.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chroma/leaguegpt/83cbfb47-1c6f-4f6e-8eca-d5563b99b35b/length.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chroma/leaguegpt/83cbfb47-1c6f-4f6e-8eca-d5563b99b35b/link_lists.bin" beforeDir="false" afterPath="$PROJECT_DIR$/LeagueGPT_backend/core/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/chroma/leaguegpt/chroma.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/patch_notes/chunks.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/patch_notes/chunks/chunks_25.06.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/patch_notes/patch_25.05.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirement.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirement.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/update_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/update_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-    </list>
+    <list default="true" id="deb16240-9c0b-44c0-b973-bae1fc6119e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -89,24 +29,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.build_chroma.executor": "Run",
-    "Python.chroma_retriever.executor": "Run",
-    "Python.chunk_patch_notes.executor": "Run",
-    "Python.config.executor": "Run",
-    "Python.generate_chunks.executor": "Run",
-    "Python.parse_patch.executor": "Run",
-    "Python.patch_scraper.executor": "Run",
-    "Python.streamlit_app.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.update_data.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Rebasing master",
-    "ignore.virus.scanning.warn.message": "true",
-    "settings.editor.selected.configurable": "terminal"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.build_chroma.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chroma_retriever.executor&quot;: &quot;Run&quot;,
+    &quot;Python.chunk_patch_notes.executor&quot;: &quot;Run&quot;,
+    &quot;Python.config.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_chunks.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parse_patch.executor&quot;: &quot;Run&quot;,
+    &quot;Python.patch_scraper.executor&quot;: &quot;Run&quot;,
+    &quot;Python.streamlit_app.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.update_data.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\hatto\PycharmProjects\LeagueGPT\LeagueGPT_backend" />
