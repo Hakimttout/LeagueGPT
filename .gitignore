@@ -1,0 +1,18 @@
+# Environnements virtuels
+.venv/
+__pycache__/
+*.pyc
+
+# Fichiers de config sensibles
+.env
+
+# Cache & logs
+*.log
+*.sqlite3
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+# Docker
+*.pid

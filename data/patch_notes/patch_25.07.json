@@ -1,0 +1,530 @@
+{
+  "title": "Notes de patch 25.07",
+  "version": "25.07",
+  "champions": {
+    "Brand": {
+      "summary": "Les dégâts de la compétence passive ont été augmentés.",
+      "context": "Brand a souffert de plusieurs nerfs assez importants dans la jungle la saison dernière. Depuis, il n'est pratiquement plus joué dans la jungle. C'est pourquoi nous souhaitons réduire certaines limites de dégâts pour qu'il redevienne viable.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Flammes",
+          "changes": [
+            {
+              "label": "Limite de dégâts par application contre les monstres non épiques",
+              "text": "Limite de dégâts par application contre les monstres non épiques: 7,5/15/22,5 (selon les effets cumulés Flammes) ⇒10/20/30 (selon les effets cumulés Flammes)"
+            },
+            {
+              "label": "Limite de dégâts de l'explosion sur les monstres",
+              "text": "Limite de dégâts de l'explosion sur les monstres: 250/325/400/475 ⇒270/355/440/525"
+            }
+          ]
+        }
+      ]
+    },
+    "Darius": {
+      "summary": "L'armure de base a été réduite. Le délai de récupération du E a été augmenté.",
+      "context": "Darius est trop performant dans toute la Faille, et pas seulement dans la jungle. Nous cherchons à prolonger la fenêtre de protection et la possibilité pour les adversaires de punir Darius après l'utilisation de son E en début de partie. Ce changement vise à rendre l'utilisation du E plus réfléchie et à faire en sorte que les répercussions de son utilisation abusive soient plus significatives.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Armure",
+              "text": "Armure: 39 ⇒37"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Crampon",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 24/21,5/19/16,5/14 ⇒26/23,5/21/18,5 /16"
+            }
+          ]
+        }
+      ]
+    },
+    "Gwen": {
+      "summary": "Les dégâts finaux du A ont été réduits. Le scaling du Z a été ajusté.",
+      "context": "Gwen est trop puissante suite aux changements apportés lors du patch 15.6. De plus, elle est plus orientée sur le début de partie que prévu. Pour faire en sorte qu'elle reste un champion évolutif comme nous l'avions imaginé, nous revenons sur certains buffs de début de partie et rajoutons une partie de son ancien scaling.",
+      "abilities": [
+        {
+          "ability_name": "A - Tchac, tchac !",
+          "changes": [
+            {
+              "label": "Dégâts du dernier coup de ciseaux",
+              "text": "Dégâts du dernier coup de ciseaux: 70/95/120/145/170 (+ 35% de votre puissance) ⇒60/85/110/135/160(+ 35% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Brume sacrée",
+          "changes": [
+            {
+              "label": "Résistances",
+              "text": "Résistances: 25 + (5% de votre puissance) →22 (+ 7% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Ivern": {
+      "summary": "La durée de l'immobilisation du A a été augmentée aux premiers rangs.",
+      "context": "Ivern est faible, surtout en début de partie. Nous voulons renforcer sa puissance de début de partie pour qu'il soit plus intéressant à choisir, en particulier pour les joueurs expérimentés.",
+      "abilities": [
+        {
+          "ability_name": "A - Enracinement",
+          "changes": [
+            {
+              "label": "Durée d'immobilisation",
+              "text": "Durée d'immobilisation: 1,2/1,4/1,6/1,8/2 ⇒1,6/1,7/1,8/1,9/2"
+            }
+          ]
+        }
+      ]
+    },
+    "Lillia": {
+      "summary": "Les dégâts du E ont été réduits.",
+      "context": "Les buffs de Lillia lors du dernier patch étaient trop puissants, mais nous aimons beaucoup le nouveau délai de récupération de son E. Nous allons donc annuler son buff de ratio de puissance, puisqu'elle n'a plus besoin d'autant de puissance.",
+      "abilities": [
+        {
+          "ability_name": "E - Graine tournoyante",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 60/85/110/135/160 (+60% de votre puissance) ⇒ 60/85/110/135/160(+50% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Lulu": {
+      "summary": "Les dégâts du A ont été réduits. Le délai de récupération du Z a été augmenté aux derniers rangs.",
+      "context": "Lors du dernier patch, nous pensions atténuer la popularité de Lulu en nerfant certains de ses compagnons de voie les plus fréquents. Cela ne s'est pas produit, alors nous allons utiliser ce nouveau patch pour rendre la méta des supports plus équilibrée. Nous allons axer nos nerfs sur ses échanges en début de phase de laning afin d'éviter aux joueurs ayant un MMR élevé de prendre les devants et sur son Z en fin de partie pour laisser plus d'ouvertures à ses adversaires.",
+      "abilities": [
+        {
+          "ability_name": "A - Duo éclatant",
+          "changes": [
+            {
+              "label": "Dégâts minimaux",
+              "text": "Dégâts minimaux: 70/105/140/175/210 (+50% de votre puissance) ⇒60/95/130/165/200(+50% de votre puissance)"
+            },
+            {
+              "label": "Dégâts maximaux",
+              "text": "Dégâts maximaux: 105/157,5/210/262,5/315 (+ 75% de votre puissance) ⇒90/142,5/195/247,5/300(+ 75% de votre puissance)"
+            },
+            {
+              "label": "",
+              "text": "Correction d'un bug à cause duquel le ralentissement diminuait plus vite que prévu."
+            },
+            {
+              "label": "",
+              "text": "Le ralentissement est à présent appliqué immédiatement, et non après une durée variable."
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Fantaisie",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 18/17,5/17/16,5/16 ⇒18"
+            }
+          ]
+        }
+      ]
+    },
+    "Naafiri": {
+      "summary": "Les PV de base ont été réduits. Les dégâts aux monstres de la compétence passive ont été réduits. Les dégâts du A ont été augmentés contre les sbires. Le délai de récupération du Z a été augmenté aux premiers rangs.",
+      "context": "Naafiri est au top, enfin, au top dans la jungle, depuis sa dernière mise à jour. Elle est particulièrement forte en début de partie, donc nous réduisons ses stats de base et sa capacité à éliminer rapidement les camps pour la rendre moins frustrante à affronter en début de partie. Elle est actuellement un peu plus forte en jungle qu'en voie du milieu, donc nous améliorons les dégâts de son A contre les sbires pour qu'elle ne soit pas trop impactée par les nerfs en jouant sur la voie du milieu.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "PV",
+              "text": "PV: 635 ⇒610"
+            },
+            {
+              "label": "Armure",
+              "text": "Armure: 30 ⇒28"
+            }
+          ]
+        },
+        {
+          "ability_name": "Compétence passive - La meute s'agrandit",
+          "changes": [
+            {
+              "label": "Dégâts contre les monstres",
+              "text": "Dégâts contre les monstres: 165% ⇒155%"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Dagues des Darkin",
+          "changes": [
+            {
+              "label": "Dégâts aux sbires",
+              "text": "Dégâts aux sbires: 80% ⇒100%"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Appel de la meute",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 20/19.5/19/18.5/18 ⇒22/21/20/19/18"
+            },
+            {
+              "label": "",
+              "text": "Correction d'un bug à cause duquel le Z ne détruisait pas toujours les tirs des tours pendant que Naafiri était impossible à cibler."
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Hallali",
+          "changes": [
+            {
+              "label": "",
+              "text": "Correction d'un bug à cause duquel Sylas qui volait l'ultime de Naafiri devenait impossible à cibler pendant l'incantation."
+            }
+          ]
+        }
+      ]
+    },
+    "Olaf": {
+      "summary": "Le délai d'incantation du E diminue désormais à mesure que la vitesse d'attaque augmente.",
+      "context": "Le E d'Olaf peut paraître lent avec une vitesse d'attaque élevée et l'absence de ratio de vitesse d'attaque ne donne pas envie d'arrêter ses attaques de base pour le lancer.",
+      "abilities": [
+        {
+          "ability_name": "E - Frappe sauvage",
+          "changes": [
+            {
+              "label": "",
+              "text": "Le délai d'incantation dépend désormais de la vitesse d'attaque."
+            },
+            {
+              "label": "Délai d'incantation",
+              "text": "Délai d'incantation: 0,25 sec ⇒0,25-0,175 (0-125% de vitesse d'attaque supplémentaire (comprend le Z))"
+            }
+          ]
+        }
+      ]
+    },
+    "Shaco": {
+      "summary": "Les dégâts de la compétence passive ont été augmentés. Les dégâts du A ont été augmentés.",
+      "context": "Shaco AP est plutôt fort actuellement, mais Shaco AD est un peu à la traîne. Nous augmentons les ratios de dégâts d'attaque pour récompenser les assassins qui aiment prendre des risques.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Traîtrise",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 20-35 (selon le niveau) (+25% de vos dégâts d'attaque bonus) dégâts physiques bonus ⇒ 20-35 (selon le niveau)(+ 30% de vos dégâts d'attaque bonus)dégâts physiques bonus"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Tromperie",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 25/35/45/55/65 (+ 60% de vos dégâts d'attaque bonus) ⇒ 25/35/45/55/65(+ 65% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Shen": {
+      "summary": "Le A applique à présent des dégâts fixes aux bâtiments.",
+      "context": "Shen a toujours été pensé comme un champion de split-push, mais dans l'état actuel du jeu, il n'inflige pas assez de dégâts aux structures pour représenter un véritable danger. Pouvoir infliger des dégâts aux tourelles avec son A devrait l'aider à appliquer davantage de pression sur les voies latérales.",
+      "abilities": [
+        {
+          "ability_name": "A - Assaut crépusculaire",
+          "changes": [
+            {
+              "label": "[NOUVEAU]",
+              "text": "[NOUVEAU]Vitesse d'attaque et dégâts fixes contre les bâtiments. Les dégâts selon les PV max ne sont pas appliqués."
+            }
+          ]
+        }
+      ]
+    },
+    "Singed": {
+      "summary": "Le délai de récupération de la compétence passive a été augmenté. Les dégâts du A ont été augmentés. Les stats bonus du R ont été réduites.",
+      "context": "Singed a reçu de nombreux changements en plus de sa nouvelle capacité à exécuter des sbires, et nous pensons que la version de Singed qui représente une menace avec sa Piste empoisonnée est plus saine pour le jeu, donc nous revenons en arrière sur ce point en compensant sur son ultime.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Sillage toxique",
+          "changes": [
+            {
+              "label": "Délai de récupération par cible",
+              "text": "Délai de récupération par cible: 8 secondes ⇒10 secondes"
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Piste empoisonnée",
+          "changes": [
+            {
+              "label": "Dégâts par seconde",
+              "text": "Dégâts par seconde: 20/30/40/50/60 (+40% de votre puissance) ⇒ 20/30/40/50/60(+42,5% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Potion de démence",
+          "changes": [
+            {
+              "label": "Stats bonus",
+              "text": "Stats bonus: 30/65/100 ⇒25/60/95"
+            }
+          ]
+        }
+      ]
+    },
+    "Trundle": {
+      "summary": "E : le ralentissement a été augmenté et le délai de récupération a été diminué.",
+      "context": "Trundle a reçu de nombreux changements qui ont fait chuter son taux de victoire, et nous pensons qu'il ne mérite pas ça. Nous redonnons un peu de puissance à son pilier pour récompenser les trolls les plus méritants.",
+      "abilities": [
+        {
+          "ability_name": "E - Montagne de glace",
+          "changes": [
+            {
+              "label": "Ralentissement",
+              "text": "Ralentissement: 30/34/38/42/46% ⇒34/38/42/46/50%"
+            },
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 24/22/20/18/16 secondes ⇒21/19,5/18/16,5/15 secondes"
+            }
+          ]
+        }
+      ]
+    },
+    "Volibear": {
+      "summary": "Les dégâts du Z ont été ajustés.",
+      "context": "Volibear est super, mais les objets AD sur lui sont bien pires que les objets AP ou tank. Nous allons donc faire en sorte que les builds dégâts d'attaque soient aussi viables que les autres en se reposant sur les combats à long terme, et pas exclusivement sur les dégâts instantanés.",
+      "abilities": [
+        {
+          "ability_name": "Z - Folie mutilatrice",
+          "changes": [
+            {
+              "label": "Amplification des dégâts améliorés",
+              "text": "Amplification des dégâts améliorés: 50% ⇒ 50%(+15% de vos dégâts d'attaque bonus)"
+            }
+          ]
+        }
+      ]
+    },
+    "Xerath": {
+      "summary": "Les dégâts du A ont été augmentés. Les dégâts du Z ont été ajustés. Les dégâts du E ont été réduits. Les dégâts du R ont été ajustés.",
+      "context": "Au fil du temps, Xerath a perdu de sa superbe en tant que mage artilleur de la voie du milieu pour se retrouver de plus en plus à incarner le rôle de support. Nous modifions donc ses dégâts pour rendre la part belle à son statut de mid laner et pour rentabiliser les achats d'objets de puissance coûteux avec son kit.",
+      "abilities": [
+        {
+          "ability_name": "A - Rayon arcanique",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 70/110/150/190/230 (+85% de votre puissance) ⇒ 70/110/150/190/230(+90% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "Z - Œil de la destruction",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 60/95/130/165/200 (+60% de votre puissance) ⇒50/85/120/155/190 (+65% de votre puissance bonus)"
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Orbe d'électrocution",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 80/110/140/170/200 (+45% de votre puissance) ⇒70/100/130/160/190(+45% de votre puissance)"
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Rite arcanique",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 180/230/280 (+40% de votre puissance) ⇒170/220/270 (+45% de votre puissance)"
+            }
+          ]
+        }
+      ]
+    },
+    "Yone": {
+      "summary": "La réduction des dégâts critiques de la compétence passive a été supprimée. La purge de contrôle de foule du E est supprimée.",
+      "context": "Nous apportons quelques modifications à Yone qui, nous l'espérons, plairont à la fois aux joueurs de Yone et aux joueurs qui l'affrontent. Il copie son petit demi-frère en retirant la réduction de dégâts critiques de son passif, ce qui veut dire qu'il infligera plus de dégâts, donc qu'il fera plus d'éliminations et gagnera plus souvent. En contrepartie, son E ne lui permettra plus de purger tous les types de contrôles de foule durant son retour. Désormais, il sera toujours étourdi, immobilisé, aveuglé ou autre s'il a subi l'effet durant son animation de retour, ce qui devrait laisser le temps à ses adversaires de l'attraper pour le tuer. Ce sera aux joueurs de Yone de faire plus attention à leur point de départ avant de lancer cette compétence.",
+      "abilities": [
+        {
+          "ability_name": "Compétence passive - Voie du chasseur",
+          "changes": [
+            {
+              "label": "",
+              "text": "Les dégâts de coup critique ne sont plus réduits de 10%."
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Libération spirituelle",
+          "changes": [
+            {
+              "label": "",
+              "text": "Ne purge désormais plus les contrôles de foule au retour."
+            },
+            {
+              "label": "",
+              "text": "La bulle d'aide clarifie que seuls les dégâts des attaques et des compétences sont amplifiés."
+            }
+          ]
+        }
+      ]
+    },
+    "Yorick": {
+      "summary": "Ajustements importants pour Yorick.",
+      "context": "Nous apportons une mise à jour conséquente pour Yorick avec deux objectifs principaux. Tout d'abord, nous aimerions rendre Yorick plus agréable à jouer en compensant ses points faibles pour en faire un champion plus complet. Ensuite, nous cherchons à le rendre plus fort à un niveau de jeu élevé, en donnant la possibilité aux joueurs de montrer leur talent sur Yorick et en rendant le champion de taille à affronter des adversaires de haut niveau. Nous apportons également quelques modifications mineures qui permettront de rééquilibrer Yorick plus facilement à l'avenir. Nous verrons ça plus tard.Pour rendre Yorick plus indépendant et combler ses défauts de gameplay, nous améliorons grandement son début de partie et sa capacité à combattre en dehors de sa voie. Il y aura donc plus de tombes à partir de sbires que vous ne tuez pas avec le A, des tombes qui apparaîtront sur les champions, les grands monstres et les monstres épiques que vous éliminerez, de simples buffs des stats du A, et un nouveau debuff sur le E que Yorick peut activer lui-même, au lieu d'une amélioration de Goules de Brume.Afin de vous permettre de mieux exprimer votre talent sur le champion, nous faisons en sorte que les actions de Yorick comptent davantage (encore une fois grâce aux buffs du A et au changement du E) tout en modifiant le système de PV des Goules de Brume. Elles seront plus nombreuses et infligeront moins de dégâts en fin de partie, mais elles seront résistantes à davantage de types de dégâts pour pouvoir résister un peu plus longtemps au combat contre les champions.Nous corrigeons aussi quelques bugs, notamment concernant les Goules de Brume. En changeant ses invocations pour qu'elles prennent en compte les bonus de Yorick plutôt que ses statistiques totales, nous faisons en sorte que toute nouvelle modification des statistiques de base de Yorick n'affecte pas également toutes ses invocations, ce qui facilitera des changements plus ciblés à l'avenir. Pour la Vierge, cela donne des PV quasiment identiques, tandis que les autres changements sont intentionnellement des nerfs de fin de partie.",
+      "abilities": [
+        {
+          "ability_name": "Stats de base",
+          "changes": [
+            {
+              "label": "Stat de croissance en armure",
+              "text": "Stat de croissance en armure: 5,2 ⇒4,5"
+            }
+          ]
+        },
+        {
+          "ability_name": "Compétence passive - Berger des âmes",
+          "changes": [
+            {
+              "label": "Morts proches par tombe",
+              "text": "Morts proches par tombe: 12/6/2 (aux niveaux 1/7/13) ⇒8/7/6/5/4/3/2 (aux niveaux 1/3/5/7/9/11/13)"
+            },
+            {
+              "label": "Dégâts d'attaque",
+              "text": "Dégâts d'attaque: 4-90 (selon le niveau) (+20% des dégâts d'attaque totaux) ⇒15-75 (selon le niveau) (+20% des dégâts d'attaque bonus)"
+            },
+            {
+              "label": "Vitesse d'attaque bonus",
+              "text": "Vitesse d'attaque bonus: 8% (par niveau) ⇒vitesse d'attaque bonus de Yorick"
+            },
+            {
+              "label": "PV",
+              "text": "PV: 110-212 (selon le niveau) (+20% des PV max) ⇒100-300 (selon le niveau) (+15% des PV bonus)"
+            },
+            {
+              "label": "",
+              "text": "Les stats de Goules de brume se mettent à jour de manière dynamique lorsque Yorick gagne un niveau ou des stats, au lieu d'attendre de nouvelles invocations."
+            },
+            {
+              "label": "Dégâts des attaques de champion contre les Goules de Brume",
+              "text": "Dégâts des attaques de champion contre les Goules de Brume: tuent instantanément ⇒100% de dégâts supplémentaires aux attaques de mêlée"
+            },
+            {
+              "label": "Dégâts à cible unique sur les Goules de Brume",
+              "text": "Dégâts à cible unique sur les Goules de Brume: tuent instantanément ⇒dégâts normaux"
+            },
+            {
+              "label": "Dégâts de zone sur les Goules de Brume",
+              "text": "Dégâts de zone sur les Goules de Brume: 50% ⇒66-40% (selon le niveau 1-14)"
+            },
+            {
+              "label": "Dégâts de non-champions sur les Goules de Brume",
+              "text": "Dégâts de non-champions sur les Goules de Brume: 50% de tous les monstres ⇒40% des dégâts des sbires et des monstres non épiques"
+            },
+            {
+              "label": "",
+              "text": "Les Goules de Brume ne suivent plus le Rappel de Yorick pendant les combats contre les monstres."
+            },
+            {
+              "label": "",
+              "text": "Yorick peut ping sa compétence passive pour annoncer le nombre de ses Goules de Brume à proximité et partout."
+            }
+          ]
+        },
+        {
+          "ability_name": "A - Derniers sacrements",
+          "changes": [
+            {
+              "label": "Délai de récupération",
+              "text": "Délai de récupération: 7/6,25/5,5/4,75/4 ⇒6/5,5/5/4,5/4"
+            },
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 30/55/80/105/130 (+40% de vos dégâts d'attaque totaux) ⇒ 30/55/80/105/130(+50% de vos dégâts d'attaque totaux)"
+            },
+            {
+              "label": "[NOUVEAU]",
+              "text": "[NOUVEAU]Invoque une tombe en cas d'impact sur un champion et un monstre grand/épique."
+            }
+          ]
+        },
+        {
+          "ability_name": "E - Brume endeuillée",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 15% de vos PV actuels, avec un minimum de 70/105/140/175/210 (+70% de votre puissance) ⇒70/105/140/175/210 (+100% de votre puissance)"
+            },
+            {
+              "label": "Vitesse de déplacement de Yorick et ses invocations",
+              "text": "Vitesse de déplacement de Yorick et ses invocations: 20% ⇒ 30%"
+            },
+            {
+              "label": "[NOUVEAU]",
+              "text": "[NOUVEAU]Réduit à présent l'armure de 18/21/24/27/30% pendant 4 secondes."
+            },
+            {
+              "label": "[RETIRÉ]",
+              "text": "[RETIRÉ]N'augmente plus les dégâts des Goules de brume de 20% pour 8 attaques."
+            },
+            {
+              "label": "",
+              "text": "Correction d'un bug à cause duquel les Goules de Brume ne sautaient pas toujours sur la cible en traversant le terrain."
+            }
+          ]
+        },
+        {
+          "ability_name": "R - Vierge de la Brume",
+          "changes": [
+            {
+              "label": "Dégâts",
+              "text": "Dégâts: 0/10/40 (+50% des dégâts d'attaque totaux) ⇒50/75/100 (+30% des dégâts d'attaque bonus)"
+            },
+            {
+              "label": "PV",
+              "text": "PV: 400-1 650 (selon le niveau) (+60% des PV totaux) ⇒1 050-3 200 (selon le niveau)(+60% des PV bonus)"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "items": {
+    "Catalyseur de l'éternité": {
+      "summary": "",
+      "context": "Catalyseur de l'éternité est un peu faible pour un objet épique de phase de laning. Nous aimerions qu'il conserve un prix différent de celui de Chapitre perdu afin de garder une certaine diversité en laning, mais cet objet ne devrait pas être aussi difficile à acheter et son mana devrait être similaire à celui de son semblable.",
+      "abilities": []
+    },
+    "Bâton séculaire": {
+      "summary": "",
+      "context": "Ajustement de l'effet Éternité pour égaler le bonus du Catalyseur ci-dessus.",
+      "abilities": []
+    },
+    "Glaive d'ombre": {
+      "summary": "",
+      "context": "Glaive d'ombre a été un objet faible pendant longtemps, mais nous avons hésité à le buffer purement et simplement à cause de son passif extrêmement puissant. Nous avons décidé de réduire la fréquence du passif afin qu'il soit moins gênant pour la vision ennemie, tout en améliorant ses statistiques et son coût. Nous pensons que cela constituera un buff sensible de l'objet.",
+      "abilities": []
+    }
+  },
+  "others": []
+}

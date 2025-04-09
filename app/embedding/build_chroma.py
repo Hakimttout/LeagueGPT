@@ -7,7 +7,7 @@ from transformers import AutoTokenizer, AutoModel
 import torch
 from tqdm import tqdm
 import numpy as np
-from app.config import CHROMA_DIR, CHUNKS_PATH, EMBED_MODEL
+from app.config import CHROMA_DIR, EMBED_MODEL, get_chroma_host
 
 def normalize(vec):
     return vec / np.linalg.norm(vec)
@@ -15,19 +15,16 @@ def normalize(vec):
 # Paramètres
 COLLECTION_NAME = "patch_chunks"
 
-def build_chroma():
-    # Load des chunks
-    with open(CHUNKS_PATH, "r", encoding="utf-8") as f:
-        chunks = json.load(f)
+def build_chroma(chunks, collection_name):
+    host, port = get_chroma_host()
+    client = chromadb.HttpClient(host=host, port=port)
 
-    # Setup Chroma
-    client = chromadb.PersistentClient(path=CHROMA_DIR)
+    try:
+        client.delete_collection(name=collection_name)
+    except:
+        pass
 
-    # Supprimer l’ancienne collection si elle existe
-    if COLLECTION_NAME in [c.name for c in client.list_collections()]:
-        client.delete_collection(name=COLLECTION_NAME)
-
-    collection = client.create_collection(name=COLLECTION_NAME)
+    collection = client.create_collection(name=collection_name)
 
     # Embedding model
     # Chargement du modèle e5-base
@@ -58,7 +55,7 @@ def build_chroma():
             ids=[doc_id]
         )
 
-    print(f"✅ {len(chunks)} chunks indexés dans Chroma ({COLLECTION_NAME})")
+    print(f"✅ {len(chunks)} chunks indexés dans Chroma ({collection_name})")
 
 if __name__ == "__main__":
     build_chroma()

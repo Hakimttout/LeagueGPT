@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: LeagueGPT_backend/Dockerfile
+    container_name: leaguegpt_django
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+    env_file:
+      - ./LeagueGPT_backend/.env
+    working_dir: /app/LeagueGPT_backend
+    command: python manage.py runserver 0.0.0.0:8000
+
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  chroma:
+    image: ghcr.io/chroma-core/chroma:latest
+    container_name: chroma
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma-data:/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+
+  frontend:
+    build:
+      context: ./LeagueGPT_frontend
+      dockerfile: Dockerfile
+    container_name: leaguegpt_frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    environment:
+      - NODE_ENV=production
+
+volumes:
+  ollama-data:
+  chroma-data:
