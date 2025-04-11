@@ -29,8 +29,8 @@ def get_collection_safe(name):
     client = chromadb.HttpClient(host=host, port=port)
     try:
         return client.get_collection(name=name)
-    except chromadb.errors.InvalidCollectionException:
-        print(f"La collection {name} n'existe pas encore.")
+    except Exception as e:
+        print(f"Erreur lors de la récupération de la collection {name} : {e}")
         return None
 
 def get_latest_patch_collection():
