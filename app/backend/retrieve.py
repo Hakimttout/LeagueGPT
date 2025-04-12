@@ -20,38 +20,42 @@ embed_model = AutoModel.from_pretrained(EMBED_MODEL)
 rerank_tokenizer = AutoTokenizer.from_pretrained(RERANK_MODEL)
 rerank_model = AutoModelForSequenceClassification.from_pretrained(RERANK_MODEL)
 
-# === CONVERSATION MEMORY (éphémère) ===
+# === CONVERSATION MEMORY (ephemeral) ===
 conversation_history: List[Tuple[str, str]] = []  # (user_message, bot_response)
 
 # === CHROMA CLIENT ===
 def get_collection_safe(name):
+    """Safely retrieves a Chroma collection by name."""
     host, port = get_chroma_host()
     client = chromadb.HttpClient(host=host, port=port)
     try:
         return client.get_collection(name=name)
     except Exception as e:
-        print(f"Erreur lors de la récupération de la collection {name} : {e}")
+        print(f"Error retrieving collection {name}: {e}")
         return None
 
 def get_latest_patch_collection():
+    """Retrieves the latest patch collection available."""
     import os
     from app.config import CHUNK_DIR
 
     files = [f for f in os.listdir(CHUNK_DIR) if f.startswith("chunks_") and f.endswith(".json")]
     if not files:
-        raise ValueError("Aucune collection de patch trouvée.")
+        raise ValueError("No patch collections found.")
 
     versions = [f.replace("chunks_", "").replace(".json", "") for f in files]
     latest_version = sorted(versions, reverse=True)[0]
 
-    print(f"Utilisation du patch le plus récent : {latest_version}")
+    print(f"Using the latest patch: {latest_version}")
     return get_collection_safe(f"patch_{latest_version}")
 
 # === EMBEDDING ===
 def normalize(vec):
+    """Normalizes embedding vectors."""
     return vec / np.linalg.norm(vec)
 
 def embed_query(text: str):
+    """Embeds a query text into a normalized vector."""
     text = "query: " + text.strip()
     inputs = embed_tokenizer(text, return_tensors="pt", truncation=True, padding=True)
     with torch.no_grad():
@@ -61,6 +65,7 @@ def embed_query(text: str):
 
 # === SEARCH ===
 def search_chunks(user_query, collection, k=10):
+    """Searches for relevant chunks based on the user's query."""
     query_embedding = embed_query(user_query)
     results = collection.query(
         query_embeddings=[query_embedding],
@@ -71,6 +76,7 @@ def search_chunks(user_query, collection, k=10):
 
 # === RERANKING ===
 def rerank_chunks(query: str, documents: list[str], metadatas: list[dict], top_k=5, score_gap=0.05, debug=False):
+    """Re-ranks retrieved chunks using a reranker model to improve relevance."""
     documents = [doc for doc in documents if isinstance(doc, str) and doc.strip()]
     if not documents:
         return []
@@ -87,28 +93,16 @@ def rerank_chunks(query: str, documents: list[str], metadatas: list[dict], top_k
     scored = list(zip(documents, metadatas, probs.tolist()))
     scored.sort(key=lambda x: x[2], reverse=True)
 
-    if debug:
-        print("\nReranker scores:")
-        for doc, meta, score in scored:
-            champ = meta.get("champion", "?")
-            print(f"- {champ} | {score:.4f} | {doc[:90]}...")
-
     grouped = defaultdict(list)
     for doc, meta, score in scored:
-        champ = meta.get("champion", "inconnu")
+        champ = meta.get("champion", "unknown")
         grouped[champ].append((doc, score))
 
     dominant_champion, group_chunks = max(grouped.items(), key=lambda item: len(item[1]))
 
-    if debug:
-        print(f"\nChampion dominant : {dominant_champion} ({len(group_chunks)} chunks)")
-
     MAX_CHUNKS = 14
     if len(group_chunks) >= 2:
-        selected_chunks = group_chunks[:MAX_CHUNKS]
-        if debug:
-            print(f"Chunks retenus : {len(selected_chunks)} / {len(group_chunks)}")
-        return [(doc, score) for doc, score in selected_chunks]
+        return [(doc, score) for doc, score in group_chunks[:MAX_CHUNKS]]
 
     selected = [scored[0]]
     for prev, curr in zip(scored, scored[1:]):
@@ -121,68 +115,52 @@ def rerank_chunks(query: str, documents: list[str], metadatas: list[dict], top_k
 
 # === PROMPTING + GENERATION (Ollama) ===
 def build_prompt(chunks: list, question: str, history: List[dict] = None):
+    """Builds a prompt for Ollama based on retrieved chunks and conversation history."""
     context = "\n\n---\n\n".join(chunks)
 
-    # Formatage de l'historique
     history_text = ""
     if history:
-        turns = []
-        for msg in history:
-            role = msg["role"]
-            if role == "user":
-                turns.append(f"Utilisateur : {msg['content']}")
-            else:
-                turns.append(f"Assistant : {msg['content']}")
+        turns = [f"{'User' if msg['role'] == 'user' else 'Assistant'}: {msg['content']}" for msg in history]
         history_text = "\n\n".join(turns)
 
     prompt = f"""
-        Tu es un expert de League of Legends.
+    You are a League of Legends expert.
 
-        Voici des extraits du patch note et des changements récents concernant des champions et objets :
+    Here are some excerpts from recent patch notes:
 
-        {context}
+    {context}
 
-        {history_text}
+    {history_text}
 
-        En te basant uniquement sur ce contexte et la conversation précédente, réponds à la question suivante de manière claire, structurée, et concise :
+    Based only on this context and previous conversation, clearly, concisely, and structurally answer:
 
-        {question}
+    {question}
 
-        Si tu n’as pas assez d’informations, indique-le clairement.
+    If you don't have enough information, state this clearly.
     """
     return prompt.strip()
 
-
 def ask_ollama(prompt: str, model: str = "mistral"):
-    response = requests.post("http://ollama:11434/api/generate", json={
-        "model": model,
-        "prompt": prompt,
-        "stream": False
-    })
-    print(response.text)
+    """Sends a prompt to Ollama for response generation."""
+    response = requests.post("http://ollama:11434/api/generate", json={"model": model, "prompt": prompt, "stream": False})
     try:
         data = response.json()
+        return data.get("response", "Error: No response field in Ollama response.").strip()
     except Exception:
-        return "Erreur : Réponse non JSON d’Ollama"
+        return "Error: Non-JSON response from Ollama."
 
-    if "response" in data:
-        return data["response"].strip()
-    else:
-        return f"Erreur : champ 'response' absent dans la réponse Ollama - status {response.status_code}, body: {data}"
-
-# === PIPELINE COMPLET ===
+# === COMPLETE PIPELINE ===
 def generate_answer(question: str, n_chunks=10, top_k=3, history: List[dict] = None):
+    """Generates an answer by retrieving, reranking, and generating responses."""
     collection = get_latest_patch_collection()
     if not collection:
-        return "Aucune donnée disponible pour répondre à cette question."
+        return "No data available to answer this question."
 
     raw = search_chunks(question, collection=collection, k=n_chunks)
     docs = [doc for doc, _, _ in raw]
     metas = [meta for _, meta, _ in raw]
-    for doc, meta, dist in raw:
-        print(f"- {meta.get('champion')} | {dist:.4f} | {doc[:100]}...")
 
-    top_docs = rerank_chunks(question, docs, metas, top_k=7, debug=True)
+    top_docs = rerank_chunks(question, docs, metas, top_k=7)
     top_texts = [doc for doc, _ in top_docs]
 
     prompt = build_prompt(top_texts, question, history=history)
