@@ -19,21 +19,21 @@ def run_ingestion_pipeline(limit=3):
         version = patch.get("version", "unknown")
         patch_file = os.path.join(PATCH_DIR, f"patch_{version}.json")
 
-        # Sauvegarde brute du patch si inexistant
+        # Save raw patch if it doesn't exist
         if not os.path.exists(patch_file):
             with open(patch_file, "w", encoding="utf-8") as f:
                 json.dump(patch, f, indent=2, ensure_ascii=False)
-            print(f"✅ Patch {version} sauvegardé")
+            print(f"Patch {version} saved")
 
-        # Chunking du patch
+        # Chunking the patch
         chunks = chunk_from_riot_json(patch)
 
-        # Sauvegarde des chunks individuels
+        # Save individual chunks
         chunk_file = os.path.join(CHUNK_DIR, f"chunks_{version}.json")
         with open(chunk_file, "w", encoding="utf-8") as f:
             json.dump(chunks, f, indent=2, ensure_ascii=False)
 
-        print(f"💾 {len(chunks)} chunks pour patch {version}")
+        print(f"{len(chunks)} chunks created for patch {version}")
 
 if __name__ == "__main__":
     run_ingestion_pipeline()
