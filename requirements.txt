@@ -6,10 +6,7 @@ torch
 requests
 beautifulsoup4
 python-dotenv
-<<<<<<<< HEAD:requirements.txt
-========
 python-decouple
 django
 djangorestframework
 django-cors-headers
->>>>>>>> cb7c208 (Afrontend):LeagueGPT_backend/requirements.txt
