@@ -12,7 +12,7 @@ from app.config import CHROMA_DIR, EMBED_MODEL, get_chroma_host
 def normalize(vec):
     return vec / np.linalg.norm(vec)
 
-# Paramètres
+# Parameters
 COLLECTION_NAME = "patch_chunks"
 
 def build_chroma(chunks, collection_name):
@@ -27,12 +27,12 @@ def build_chroma(chunks, collection_name):
     collection = client.create_collection(name=collection_name)
 
     # Embedding model
-    # Chargement du modèle e5-base
+    # Load e5-base model
     tokenizer = AutoTokenizer.from_pretrained(EMBED_MODEL)
     model = AutoModel.from_pretrained(EMBED_MODEL)
 
     def embed_text(text: str):
-        # Préfixe obligatoire pour les documents
+        # Required prefix for documents
         text = "passage: " + text.strip()
         inputs = tokenizer(text, return_tensors="pt", truncation=True, padding=True)
         with torch.no_grad():
@@ -40,14 +40,14 @@ def build_chroma(chunks, collection_name):
             embeddings = output.last_hidden_state[:, 0, :]
             return normalize(embeddings.squeeze().numpy())
 
-    print(f"🔢 {len(chunks)} chunks à embedder...")
+    print(f"Embedding {len(chunks)} chunks...")
 
-    # Injection dans Chroma par batch
+    # Batch insertion into Chroma
     for i, chunk in enumerate(tqdm(chunks)):
         doc_id = f"chunk-{i}"
         embedding = embed_text(chunk["text"])
 
-        # On ajoute le chunk avec métadonnées
+        # Add chunk with metadata
         collection.add(
             documents=[chunk["text"]],
             embeddings=[embedding],
@@ -55,7 +55,7 @@ def build_chroma(chunks, collection_name):
             ids=[doc_id]
         )
 
-    print(f"✅ {len(chunks)} chunks indexés dans Chroma ({collection_name})")
+    print(f"{len(chunks)} chunks indexed in Chroma ({collection_name})")
 
 if __name__ == "__main__":
     build_chroma()
